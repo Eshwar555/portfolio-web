@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="home" class="reveal">
+        <div class="container">
+            <h1>Eshwar Vandaganti</h1>
+            <p>Web Developer</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section reveal">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>Hey there, my self Eshwar persuing my Graduation at IARE (2026-passout). Have a look ahead.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section reveal">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-items">
+                <!-- Example portfolio items -->
+                <div class="portfolio-item reveal">
+                    <img src="portfolio-item1.jpg" alt="Portfolio Item 1">
+                    <div class="portfolio-item-details">
+                        <h3>Project Title</h3>
+                        <p>Description of the project goes here.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <img src="portfolio-item2.jpg" alt="Portfolio Item 2">
+                    <div class="portfolio-item-details">
+                        <h3>Project Title</h3>
+                        <p>Description of the project goes here.</p>
+                    </div>
+                </div>
+                <!-- Add more portfolio items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul class="skills-list reveal">
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Responsive Web Design</li>
+                <li>UI/UX Design</li>
+                <li>Animation with CSS & JavaScript</li>
+                <!-- Add more skills -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm" class="reveal">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="reveal">
+        <div class="container">
+            <p>&copy; 2024 Eshwar Vandaganti. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

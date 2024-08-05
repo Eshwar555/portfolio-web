@@ -1,0 +1,192 @@
+/* Reset and general styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #2980b9, #6dd5fa); /* Gradient background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section {
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-content, .portfolio-item, .skills-list, .contact-form, footer {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px 5px 0 0;
+}
+
+.portfolio-item .portfolio-item-details {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-item-details {
+    opacity: 1;
+}
+
+.portfolio-item-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.portfolio-item-details p {
+    color: #666;
+}
+
+.skills-list {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.skills-list li {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.skills-list li:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Semi-transparent white border */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder text color */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    backface-visibility: hidden;
+}
+
+.contact-form button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+    transform: translateZ(10px);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
